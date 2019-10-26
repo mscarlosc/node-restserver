@@ -1,0 +1,9 @@
+- URL de Mongo DB
+  U: admin
+  P: M0ngoAdmin2....
+
+    mongodb+srv://admin:M0ngoAdmin27421042@cluster0-wjqqe.mongodb.net/bd_cafe
+
+
+
+    

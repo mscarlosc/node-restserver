@@ -1,32 +1,33 @@
 //
-require('./config/config')
+require('./config/config');
 
-const express = require('express')
-const app = express()
-const bodyParser = require('body-parser')
+const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+const bodyParser = require('body-parser');
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
- 
-// parse application/json
+ // parse application/json
 app.use(bodyParser.json())
 
+app.use( require('./routes/usuario') );
+
  
-app.get('/usuario', (req, res) => {
-  res.json('get usuario')
-})
 
-app.post('/usuario', (req, res) => {
 
-  let body = req.body;
+mongoose.connect(process.env.URL_DB, 
+  {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true},
+  (err, res) => {
 
-  res.json({ persona: body })
-})
+    if ( err ) throw err;
 
-app.put('/usuario', (req, res) => {
-  res.json('put usuario')
-})
- 
+    console.log("Base de Datos On Line");
+});
+
+
+
 app.listen(process.env.PORT, () => {
     console.log('Escuchando en el puerto', process.env.PORT);
 });
