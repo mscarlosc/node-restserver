@@ -4,6 +4,11 @@
 
     mongodb+srv://admin:M0ngoAdmin27421042@cluster0-wjqqe.mongodb.net/bd_cafe
 
+- Google Sing-In 
+  Client ID :
+        220973636688-g14h8n30cli1lg0j4hbu3dl8gbjf4fbr.apps.googleusercontent.com
 
+  Client Secret :
+        B-l_Kby6pdQnFxwXtaZIfr-n
 
     
